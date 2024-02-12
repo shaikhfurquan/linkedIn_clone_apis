@@ -2,10 +2,11 @@ USER
 
 USER REGISTER   ===> POST  ===>  http://localhost:4545/api/user/register
 {
-   "firstName" : "sk",
-    "lastName" : "sf",
-    "email" : "sf@gmail.com",
-    "password": "123"
+   "firstName" : "kp",
+    "lastName" : "kp",
+    "email" : "kp@gmail.com",
+    "password": "123",
+    "answer" : "teki"
 }
 
 
