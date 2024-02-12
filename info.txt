@@ -1,0 +1,49 @@
+USER
+
+USER REGISTER   ===> POST  ===>  http://localhost:4545/api/user/register
+{
+   "firstName" : "sk",
+    "lastName" : "sf",
+    "email" : "sf@gmail.com",
+    "password": "123"
+}
+
+
+USER REGISTER   ===> POST  ===>  http://localhost:4545/api/user/login
+{
+    "email" : "sf@gmail.com",
+    "password": "123"
+}
+
+
+USER LOGOUT  ==> GET ==> http://localhost:4545/api/user/logout
+
+
+LOGIN USER PROFILE  ==> GET ==> http://localhost:4545/api/user/myprofile
+
+
+USER BY ID  ==> GET      ==> http://localhost:4545/api/user/65ca481e3471b772d60cfa11
+
+
+
+DELETE USER  ==> DELETE  ==> http://localhost:4545/api/user/delete/65ca4fe5147d2cf3d04ee407
+
+
+
+UPDATE USER  ==> PUT  ==> http://localhost:4545/api/user/update/65ca516f3fe8081726052c7d
+
+
+RESET-PASSWORD  ==>  POST ==> http://localhost:4545/api/user/reset-password
+{
+  "email" : "kp@gmail.com",
+  "answer" : "teki",
+  "newPassword" : "1234"
+}
+
+
+UPDATE-PASSWORD  ==> POST  ==> http://localhost:4545/api/user/update-password/65ca5bb8e04faff8d90ebee4
+
+  {
+  "oldPassword" : "1234",
+  "newPassword" : "123"
+}
