@@ -9,8 +9,8 @@ dotenv.config()
 
 const isAuth = async (req, res, next) => {
 
-    //token comming from cookie
-    const { token } = req.cookies
+    //token comming from cookie/request headers
+    const { token } = req.cookies || (req.headers["authorization"] && req.headers["authorization"].split(" ")[1]);
     console.log(token);
 
     //If token is not available then
