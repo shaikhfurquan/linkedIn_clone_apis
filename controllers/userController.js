@@ -120,7 +120,7 @@ export const userLogout = (req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            success: true,
+            success: false,
             message: "Error while logged-Out user",
             error: error.message
         })
@@ -136,7 +136,7 @@ export const getMyProfile = (req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            success: true,
+            success: false,
             message: "Error while logged-Out user",
             error: error.message
         })
@@ -155,14 +155,39 @@ export const getUserById = async (req, res) => {
 
         console.log(user);
         res.status(200).json({
-            success: false,
+            success: true,
             user: user
         })
     } catch (error) {
         res.status(500).json({
-            success: true,
+            success: false,
             message: "Error while showing user by id",
             error: error.message
+        })
+    }
+}
+
+
+export const allUsers = async (req, res) => {
+    try {
+        const users = await UserModel.find()
+        if(!users){
+            res.status(404).json({
+                success : true,
+                message : 'No Users Found'
+            })
+        }
+        
+        res.status(200).json({
+            success: true,
+            message: "Users lists fetch succesfully",
+            users : users
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Error while showing users",
+            error: error
         })
     }
 }
@@ -186,7 +211,7 @@ export const userDelete = async (req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            success: true,
+            success: false,
             message: "Error while deleting user",
             error: error.message
         })
@@ -211,7 +236,7 @@ export const userUpdate = async(req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            success: true,
+            success: false,
             message: "Error while updating user",
             error: error.message
         })

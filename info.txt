@@ -23,8 +23,10 @@ USER LOGOUT  ==> GET ==> http://localhost:4545/api/user/logout
 LOGIN USER PROFILE  ==> GET ==> http://localhost:4545/api/user/myprofile
 
 
-USER BY ID  ==> GET      ==> http://localhost:4545/api/user/65ca481e3471b772d60cfa11
+USER BY ID  ==> GET   ==> http://localhost:4545/api/user/get/65ca5bb8e04faff8d90ebee4
 
+
+GET ALL USERS ==> GET ==>  http://localhost:4545/api/user/get-all
 
 
 DELETE USER  ==> DELETE  ==> http://localhost:4545/api/user/delete/65ca4fe5147d2cf3d04ee407
